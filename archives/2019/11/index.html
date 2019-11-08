@@ -93,7 +93,7 @@
             
               <li class="archive-list-container">
                 <a href="javascript:;" target="_blank" rel="noopener">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">3</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">4</span></li></ul>
               </li>
             
           
@@ -162,6 +162,154 @@
 
     <div class="post-list-item article">
       <h3 class="article-header">
+        <a href="/2019/11/08/markdown%E8%AF%AD%E6%B3%95/" >
+  markdown语法
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/11/08/markdown%E8%AF%AD%E6%B3%95/"><span class="article-date">
+  2019-11-08
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h1 id="Mark标题"><a href="#Mark标题" class="headerlink" title="Mark标题"></a>Mark标题</h1><p>一级标题— or #<br><br>二级标题=== or ##<br><br>三级标题###<br><br>四级标题####<br><strong><em>————以此类推</em></strong></p>
+<h1 id="Markdown段落"><a href="#Markdown段落" class="headerlink" title="Markdown段落"></a>Markdown段落</h1><p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。</p>
+<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>*<em>斜体文本*\</em><br><br>_<em>斜体文本__<br><br>**<strong>粗体文本</strong>**<br><br>__<strong>粗体文本</strong>_\</em><br></p>
+<p>~~<del>删除线</del>~~<br><br><u>&lt;u&gt;下划线&lt;/u&gt;</u>下划线通过 HTML 的标签来实现：<br></p>
+<p><strong>脚注</strong><br><br>脚注是对文本的补充说明。<br>Markdown 脚注的格式如下:</p>
+<p>[^要注明的文本]</p>
+<p>以下实例演示了脚注的用法：</p>
+<p>创建脚注格式类似这样 [^RUNOOB]。</p>
+<p>[^RUNOOB]: 菜鸟教程 – 学的不仅是技术，更是梦想！！！</p>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线<br><br>----</p>
+<hr>
+<p>----</p>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title="____"></a>____</h2><h1 id="Markdown-列表"><a href="#Markdown-列表" class="headerlink" title="Markdown 列表"></a>Markdown 列表</h1><p>Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<p>有序列表使用数字并加上 . 号来表示，如：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<p>列表嵌套<br>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
+<ol>
+<li>第一项：<ul>
+<li>第一项嵌套的第一个元素</li>
+</ul>
+<ul>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+<h1 id="Markdown-区块"><a href="#Markdown-区块" class="headerlink" title="Markdown 区块"></a>Markdown 区块</h1><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<blockquote>
+<p>菜鸟教程</p>
+</blockquote>
+<blockquote>
+<p>学的不仅是技术更是梦想</p>
+</blockquote>
+<p>另外区块是可以嵌套的</p>
+<p>一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推退：</p>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>列表中使用区块</p>
+<p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。</p>
+<p>区块中使用列表实例如下：</p>
+<ul>
+<li>第一项<blockquote>
+<p>菜鸟教程<br>学的不仅是技术更是梦想</p>
+</blockquote>
+</li>
+<li>第二项</li>
+</ul>
+<h1 id="Markdown代码"><a href="#Markdown代码" class="headerlink" title="Markdown代码"></a>Markdown代码</h1><p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（<code>），例如：
+\</code>printf()`函数</p>
+<p><code>printf()</code>函数</p>
+<hr>
+<p>代码区块<br>代码区块使用 4 个空格或者一个制表符（Tab 键）。<br><br>实例如下：</p>
+<pre><code>&lt;?php echo
+
+
+?&gt;</code></pre><hr>
+<p>你也可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'RUNOOB'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="Markdown-链接"><a href="#Markdown-链接" class="headerlink" title="Markdown 链接"></a>Markdown 链接</h1><p>链接使用方法如下：<br><a href="链接地址">链接名称</a></p>
+<p>或者</p>
+<p>&lt;链接地址&gt;<br>例如：</p>
+<p>这是一个链接 <a href="https://www.runoob.com" target="_blank" rel="noopener">菜鸟教程</a><br>显示结果如下：</p>
+<p>直接使用链接地址：</p>
+<p><a href="https://www.runoob.com" target="_blank" rel="noopener">https://www.runoob.com</a><br>显示结果如下：</p>
+<h1 id="高级链接"><a href="#高级链接" class="headerlink" title="高级链接"></a>高级链接</h1><p>链接也可以用变量来代替，文档末尾附带变量地址：<br><br>这个链接用 1 作为网址变量 <a href="http://www.google.com/<br" target="_blank" rel="noopener">Google</a><br><br>这个链接用 runoob 作为网址变量 <a href="http://www.runoob.com/" target="_blank" rel="noopener">Runoob</a><br><br>然后在文档的结尾为变量赋值（网址）<br></p>
+<h1 id="Markdown-图片"><a href="#Markdown-图片" class="headerlink" title="Markdown 图片"></a>Markdown 图片</h1><p>Markdown 图片语法格式如下：</p>
+<p><img src="%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本"></p>
+<p><img src="%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本" title="可选标题"><br>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。<br>使用实例：</p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB"></p>
+<p><br><br></p>
+<h1 id="Markdown-表格"><a href="#Markdown-表格" class="headerlink" title="Markdown 表格"></a>Markdown 表格</h1><p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</p>
+<p>语法格式如下：</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+
+        
+      </div>
+    </div>
+
+  
+
+  
+  
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
         <a href="/2019/11/08/waiwai-test-blog/" >
   waiwai_test_blog
 </a>
@@ -181,7 +329,8 @@
       </div>
       <div class="article-entry">
         
-          
+          <p>Welcome to myblog</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
         
       </div>
     </div>
@@ -248,20 +397,7 @@
       </div>
       <div class="article-entry">
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+          
         
       </div>
     </div>

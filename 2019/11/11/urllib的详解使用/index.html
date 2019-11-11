@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="waiwailo/blog" type="application/atom+xml" />
 
@@ -81,20 +83,19 @@
 
 
 
-<meta name="description" content="[TOC] http:&#x2F;&#x2F;httpbin.org&#x2F; 爬虫测试网站 urllib的详解使用# 吃鱼益智关注 0.2742018.08.10 09:09:56字数 2,445阅读 12,297 我们首先了解一下 Urllib 库，它是 Python 内置的 HTTP 请求库，也就是说我们不需要额外安装即可使用，它包含四个模块：  第一个模块 request，它是最基本的 HTTP 请求模块，我们可以用">
+<meta name="description" content="http:&#x2F;&#x2F;httpbin.org&#x2F; 爬虫测试网站 urllib的详解使用#我们首先了解一下 Urllib 库，它是 Python 内置的 HTTP 请求库，也就是说我们不需要额外安装即可使用，它包含四个模块：  第一个模块 request，它是最基本的 HTTP 请求模块，我们可以用它来模拟发送一请求，就像在浏览器里输入网址然后敲击回车一样，只需要给库方法传入 URL 还有额外的参数，就可以模">
 <meta property="og:type" content="article">
 <meta property="og:title" content="urllib的详解使用">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;11&#x2F;urllib%E7%9A%84%E8%AF%A6%E8%A7%A3%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="waiwailo&#x2F;blog">
-<meta property="og:description" content="[TOC] http:&#x2F;&#x2F;httpbin.org&#x2F; 爬虫测试网站 urllib的详解使用# 吃鱼益智关注 0.2742018.08.10 09:09:56字数 2,445阅读 12,297 我们首先了解一下 Urllib 库，它是 Python 内置的 HTTP 请求库，也就是说我们不需要额外安装即可使用，它包含四个模块：  第一个模块 request，它是最基本的 HTTP 请求模块，我们可以用">
+<meta property="og:description" content="http:&#x2F;&#x2F;httpbin.org&#x2F; 爬虫测试网站 urllib的详解使用#我们首先了解一下 Urllib 库，它是 Python 内置的 HTTP 请求库，也就是说我们不需要额外安装即可使用，它包含四个模块：  第一个模块 request，它是最基本的 HTTP 请求模块，我们可以用它来模拟发送一请求，就像在浏览器里输入网址然后敲击回车一样，只需要给库方法传入 URL 还有额外的参数，就可以模">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;upload.jianshu.io&#x2F;users&#x2F;upload_avatars&#x2F;11457134&#x2F;736f4ed3-b9d6-4957-8fe8-141bd431b95a.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;1&#x2F;w&#x2F;96&#x2F;h&#x2F;96&#x2F;format&#x2F;webp">
 <meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11457134-2750fdef0827e53c.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;772&#x2F;format&#x2F;webp">
 <meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15064033-b7d2820a38d78488.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1009&#x2F;format&#x2F;webp">
 <meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15064033-ddcceb1f4095b6a8.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1006&#x2F;format&#x2F;webp">
-<meta property="og:updated_time" content="2019-11-11T15:10:44.203Z">
+<meta property="og:updated_time" content="2019-11-11T15:36:07.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;upload.jianshu.io&#x2F;users&#x2F;upload_avatars&#x2F;11457134&#x2F;736f4ed3-b9d6-4957-8fe8-141bd431b95a.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;1&#x2F;w&#x2F;96&#x2F;h&#x2F;96&#x2F;format&#x2F;webp">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11457134-2750fdef0827e53c.jpg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;772&#x2F;format&#x2F;webp">
 
 
 
@@ -304,12 +305,8 @@
       
 
       
-        <p>[TOC]</p>
-<p><a href="http://httpbin.org/" target="_blank" rel="noopener">http://httpbin.org/</a> 爬虫测试网站</p>
-<h1><span id="urllib-de-xiang-jie-shi-yong">urllib的详解使用</span><a href="#urllib-de-xiang-jie-shi-yong" class="header-anchor">#</a></h1><p><a href="https://www.jianshu.com/u/3caeff0e589d" target="_blank" rel="noopener"><img src="https://upload.jianshu.io/users/upload_avatars/11457134/736f4ed3-b9d6-4957-8fe8-141bd431b95a.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/96/h/96/format/webp" alt="img"></a></p>
-<p><a href="https://www.jianshu.com/u/3caeff0e589d" target="_blank" rel="noopener">吃鱼益智</a>关注</p>
-<p>0.2742018.08.10 09:09:56字数 2,445阅读 12,297</p>
-<p>我们首先了解一下 Urllib 库，它是 Python 内置的 HTTP 请求库，也就是说我们不需要额外安装即可使用，它包含四个模块：</p>
+        <p><a href="http://httpbin.org/" target="_blank" rel="noopener">http://httpbin.org/</a> 爬虫测试网站</p>
+<h1><span id="urllib-de-xiang-jie-shi-yong">urllib的详解使用</span><a href="#urllib-de-xiang-jie-shi-yong" class="header-anchor">#</a></h1><p>我们首先了解一下 Urllib 库，它是 Python 内置的 HTTP 请求库，也就是说我们不需要额外安装即可使用，它包含四个模块：</p>
 <ul>
 <li>第一个模块 request，它是最基本的 HTTP 请求模块，我们可以用它来模拟发送一请求，就像在浏览器里输入网址然后敲击回车一样，只需要给库方法传入 URL 还有额外的参数，就可以模拟实现这个过程了。</li>
 <li>第二个 error 模块即异常处理模块，如果出现请求错误，我们可以捕获这些异常，然后进行重试或其他操作保证程序不会意外终止。</li>
@@ -464,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/08/markdown/" rel="next" title="markdown">
-                <i class="fa fa-chevron-left"></i> markdown
+              <a href="/2019/11/08/markdown%E8%AF%AD%E6%B3%95/" rel="next" title="markdown语法">
+                <i class="fa fa-chevron-left"></i> markdown语法
               </a>
             
           </div>
@@ -473,10 +470,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/11/python%E6%95%99%E7%A8%8B/" rel="prev" title="python教程">
-                python教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,7 +546,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

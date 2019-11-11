@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>waiwailo/blog</title>
   
-  
+  <subtitle>hello,guys!!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://github.com/waiwailo/waiwailo.github.io/"/>
   <updated>2019-11-11T15:41:38.318Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://github.com/waiwailo/waiwailo.github.io/</id>
   
   <author>
     <name>waiwai</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>urllib的详解使用</title>
-    <link href="http://yoursite.com/2019/11/11/urllib%E7%9A%84%E8%AF%A6%E8%A7%A3%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2019/11/11/urllib的详解使用/</id>
+    <link href="https://github.com/waiwailo/waiwailo.github.io/2019/11/11/urllib%E7%9A%84%E8%AF%A6%E8%A7%A3%E4%BD%BF%E7%94%A8/"/>
+    <id>https://github.com/waiwailo/waiwailo.github.io/2019/11/11/urllib的详解使用/</id>
     <published>2019-11-11T15:20:15.829Z</published>
     <updated>2019-11-11T15:41:38.318Z</updated>
     
@@ -46,8 +46,8 @@
   
   <entry>
     <title>markdown语法</title>
-    <link href="http://yoursite.com/2019/11/08/markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/11/08/markdown语法/</id>
+    <link href="https://github.com/waiwailo/waiwailo.github.io/2019/11/08/markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>https://github.com/waiwailo/waiwailo.github.io/2019/11/08/markdown语法/</id>
     <published>2019-11-08T08:47:29.806Z</published>
     <updated>2019-11-08T09:11:29.889Z</updated>
     

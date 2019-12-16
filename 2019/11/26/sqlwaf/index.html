@@ -81,14 +81,14 @@
 
 
 
-<meta name="description" content="大佬博客 链接  Assassins 小白assassins-white.github.io  冷逸lengjibo.github.io  Calendulabaishunxd.github.io  C0d3r1iuwww.recorday.cn  CYHcaiyuhuan.com  Linuzlinuz.me  Plzplz227.github.io  Snowmingblog.leanote">
+<meta name="description" content="sqlwaf is_integer    is_int&#x2F;is_integer    is_numeric  ctype_digit#1.is_integer 是 is_int() 的别名，是一样的 2.is_int&#x2F;is_integer主要是判断变量是否 是整数类型，其他类型是false 3.is_numeric 检测变量是否为数字或数字字符串  &amp;lt;?php var_dump(is_int(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大佬博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;%E5%A4%A7%E4%BD%AC%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="sqlwaf">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;sqlwaf&#x2F;index.html">
 <meta property="og:site_name" content="waiwailo&#x2F;blog">
-<meta property="og:description" content="大佬博客 链接  Assassins 小白assassins-white.github.io  冷逸lengjibo.github.io  Calendulabaishunxd.github.io  C0d3r1iuwww.recorday.cn  CYHcaiyuhuan.com  Linuzlinuz.me  Plzplz227.github.io  Snowmingblog.leanote">
+<meta property="og:description" content="sqlwaf is_integer    is_int&#x2F;is_integer    is_numeric  ctype_digit#1.is_integer 是 is_int() 的别名，是一样的 2.is_int&#x2F;is_integer主要是判断变量是否 是整数类型，其他类型是false 3.is_numeric 检测变量是否为数字或数字字符串  &amp;lt;?php var_dump(is_int(">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-25T17:47:19.946Z">
+<meta property="og:updated_time" content="2019-11-25T10:14:05.848Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/25/大佬博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/26/sqlwaf/"/>
 
 
 
 
 
-  <title>大佬博客 | waiwailo/blog</title>
+  <title>sqlwaf | waiwailo/blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/%E5%A4%A7%E4%BD%AC%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/sqlwaf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="waiwai">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">大佬博客</h1>
+          <h1 class="post-title" itemprop="name headline">sqlwaf</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-25T22:22:00+08:00">
-                2019-11-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-26T15:40:24+08:00">
+                2019-11-26
               </time>
             
 
@@ -299,41 +299,62 @@
       
 
       
-        <ul>
-<li><p>大佬博客</p>
-<p>链接</p>
+        <p>sqlwaf</p>
+<h2><span id="is-integer-is-int-is-integer-is-numeric-ctype-digit">is_integer    is_int/is_integer    is_numeric  ctype_digit</span><a href="#is-integer-is-int-is-integer-is-numeric-ctype-digit" class="header-anchor">#</a></h2><p>1.is_integer 是 is_int() 的别名，是一样的</p>
+<p>2.is_int/is_integer主要是判断变量是否 是整数类型，其他类型是false</p>
+<p>3.is_numeric 检测变量是否为数字或数字字符串</p>
+<ol>
+<li>&lt;?php</li>
+<li>var_dump(is_int(23));   //true</li>
+<li>var_dump( is_int(‘23’));  //false</li>
+<li>var_dump(is_numeric(23));  //true</li>
+<li>var_dump(is_numeric(‘23’)); // true</li>
+<li>?&gt;</li>
+</ol>
+<p>4.ctype_digit 函数做纯数字检测</p>
+<ol>
+<li>&lt;?php </li>
+<li>var_dump(ctype_digit(23)); //bool(false) </li>
+<li>var_dump(ctype_digit(“23”)); //bool(true) </li>
+<li>var_dump(ctype_digit(23.5)); //bool(false) </li>
+<li>var_dump(ctype_digit(NULL)); //bool(false) </li>
+<li>var_dump(ctype_digit(“”)); //bool(false) </li>
+</ol>
+<h2><span id="magic-quotes-gpc-on-get-magic-quotes-gpc">magic_quotes_gpc=On get_magic_quotes_gpc()</span><a href="#magic-quotes-gpc-on-get-magic-quotes-gpc" class="header-anchor">#</a></h2><p>magic_quotes_gpc函数在php中的作用是判断解析用户提示的数据，如包括有:post、get、cookie过来的数据增加转义字符“\”，以确保这些数据不会引起程序，特别是数据库语句因为特殊字符引起的污染而出现致命的错误</p>
+<p> 在magic_quotes_gpc=On的情况下，如果输入的数据有</p>
+<p>单引号（’）、双引号（”）、反斜线（）与 NUL（NULL 字符）等字符都会被加上反斜线。这些转义是必须的，如果这个选项为off，那么我们就必须调用addslashes这个函数来为字符串增加转义。</p>
+<p>正是因为这个选项必须为On，但是又让用户进行配置的矛盾，在PHP6中删除了这个选项，一切的编程都需要在magic_quotes_gpc=Off下进行了。在这样的环境下如果不对用户的数据进行转义，后果不仅仅是程序错误而已了。同样的会引起数据库被注入攻击的危险。所以从现在开始大家都不要再依赖这个设置为On了，以免有一天你的服务器需要更新到PHP6而导致你的程序不能正常工作。</p>
+<p>get_magic_quotes_gpc() 这个函数用来检测magic_quotes_gpc=On是否开启</p>
+<h2><span id="stripslashes">stripslashes()</span><a href="#stripslashes" class="header-anchor">#</a></h2><p>stripslashes() 函数删除由 <a href="https://www.w3school.com.cn/php/func_string_addslashes.asp" target="_blank" rel="noopener">addslashes()</a> 函数或者系统选项 在magic_quotes_gpc=On添加的反斜杠。</p>
+<h2><span id="addslashes">addslashes()</span><a href="#addslashes" class="header-anchor">#</a></h2><p>addslashes() 函数返回在预定义字符之前添加反斜杠的字符串。和开启magic_quotes_gpc=On效果一致</p>
+<p>预定义字符是：</p>
 <ul>
-<li><p><a href="https://assassins-white.github.io/" target="_blank" rel="noopener">Assassins 小白assassins-white.github.io</a></p>
-</li>
-<li><p><a href="https://lengjibo.github.io/" target="_blank" rel="noopener">冷逸lengjibo.github.io</a></p>
-</li>
-<li><p><a href="https://baishunxd.github.io/" target="_blank" rel="noopener">Calendulabaishunxd.github.io</a></p>
-</li>
-<li><p><a href="http://www.recorday.cn/" target="_blank" rel="noopener">C0d3r1iuwww.recorday.cn</a></p>
-</li>
-<li><p><a href="http://caiyuhuan.com/" target="_blank" rel="noopener">CYHcaiyuhuan.com</a></p>
-</li>
-<li><p><a href="https://linuz.me/" target="_blank" rel="noopener">Linuzlinuz.me</a></p>
-</li>
-<li><p><a href="https://plz227.github.io/" target="_blank" rel="noopener">Plzplz227.github.io</a></p>
-</li>
-<li><p><a href="http://blog.leanote.com/snowming" target="_blank" rel="noopener">Snowmingblog.leanote.</a></p>
-</li>
-<li><p><a href="https://foxgrin.github.io" target="_blank" rel="noopener">https://foxgrin.github.io</a></p>
-</li>
-<li><p><a href="https://www.cnblogs.com/-zhong/" target="_blank" rel="noopener">https://www.cnblogs.com/-zhong/</a></p>
-</li>
-<li><p>论坛</p>
-</li>
-<li><p><a href="https://www.t00ls.net/" target="_blank" rel="noopener">T00LSwww.t00ls.net</a></p>
-</li>
-<li><p><a href="http://xssor.io/" target="_blank" rel="noopener">XSS ORxssor.io</a></p>
-</li>
-<li><p><a href="https://www.0xnull.org/" target="_blank" rel="noopener">0xNULLwww.0xnull.org</a></p>
-</li>
+<li>单引号（’）</li>
+<li>双引号（”）</li>
+<li>反斜杠（\）</li>
+<li>NULL</li>
 </ul>
-</li>
+<p><strong>提示：</strong>该函数可用于为存储在数据库中的字符串以及数据库查询语句准备字符串。</p>
+<p><strong>注释：</strong>默认地，PHP 对所有的 GET、POST 和 COOKIE 数据自动运行 addslashes()。所以您不应对已转义过的字符串使用 addslashes()，因为这样会导致双层转义。遇到这种情况时可以使用函数 get_magic_quotes_gpc() 进行检测。</p>
+<h2><span id="mysql-real-escape-string">mysql_real_escape_string()</span><a href="#mysql-real-escape-string" class="header-anchor">#</a></h2><p>该函数和addslashes()类似</p>
+<p>mysql_real_escape_string() 函数转义 SQL 语句中使用的字符串中的特殊字符。</p>
+<p>下列字符受影响：</p>
+<ul>
+<li>\x00</li>
+<li>\n</li>
+<li>\r</li>
+<li>\</li>
+<li>‘</li>
+<li>“</li>
+<li>\x1a</li>
 </ul>
+<p>如果成功，则该函数返回被转义的字符串。如果失败，则返回 false。</p>
+<p><strong>语法</strong></p>
+<p>mysql_real_escape_string(string,connection)</p>
+<p>mysql_real_escape_string 主要是为了 数据库防注入、以及语句正确性等需要，将读写语句中的字符进行了转换；</p>
+<p>但最终写入到数据库中的内容，依旧是你转义前的；所以当你读出来的时候，依旧是原来转义前的内容；</p>
+<p>比如，你要在数据库中插入字符串 aaaa”aaaa 但如果写成insert into table values(“aaaa”aaaa”); 语句就出错了，使用mysql_real_escape_string就能转义成 aaaa&quot;aaaa; 最终语句就变成了 insert into table values(“aaaa&quot;aaaa”);</p>
+<p>但你select * from table 最终得到的内容依旧是 aaa</p>
 
       
     </div>
@@ -358,8 +379,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/25/src%E9%93%BE%E6%8E%A5/" rel="next" title="src链接">
-                <i class="fa fa-chevron-left"></i> src链接
+              <a href="/2019/11/25/%E5%A4%A7%E4%BD%AC%E5%8D%9A%E5%AE%A2/" rel="next" title="大佬博客">
+                <i class="fa fa-chevron-left"></i> 大佬博客
               </a>
             
           </div>
@@ -368,8 +389,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/26/sqlwaf/" rel="prev" title="sqlwaf">
-                sqlwaf <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/16/fiddler%E6%8A%93https%E5%8C%85/" rel="prev" title="fiddler抓https包">
+                fiddler抓https包 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -422,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,6 +502,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">is_integer    is_int/is_integer    is_numeric  ctype_digit#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">magic_quotes_gpc=On get_magic_quotes_gpc()#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">stripslashes()#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">addslashes()#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">mysql_real_escape_string()#</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

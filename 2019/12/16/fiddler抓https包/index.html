@@ -81,15 +81,23 @@
 
 
 
-<meta name="description" content="大佬博客 链接  Assassins 小白assassins-white.github.io  冷逸lengjibo.github.io  Calendulabaishunxd.github.io  C0d3r1iuwww.recorday.cn  CYHcaiyuhuan.com  Linuzlinuz.me  Plzplz227.github.io  Snowmingblog.leanote">
+<meta name="description" content="fiddler抓https包配置安卓手机CA证书、抓取微信数据包#导入证书前如果安装过要先清除（首次安装fillder可忽略）  清除电脑上的根证书，WIN+R快捷键，输入：certmgr.msc， 然后回车，查找所有fiddler证书，然后删除。（首次安装fiddler请忽略）     step1:#点击Tools-&amp;gt;选择HTTPS  点击图中的4选择export Root Ceratif">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大佬博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;%E5%A4%A7%E4%BD%AC%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="fiddler抓https包">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;fiddler%E6%8A%93https%E5%8C%85&#x2F;index.html">
 <meta property="og:site_name" content="waiwailo&#x2F;blog">
-<meta property="og:description" content="大佬博客 链接  Assassins 小白assassins-white.github.io  冷逸lengjibo.github.io  Calendulabaishunxd.github.io  C0d3r1iuwww.recorday.cn  CYHcaiyuhuan.com  Linuzlinuz.me  Plzplz227.github.io  Snowmingblog.leanote">
+<meta property="og:description" content="fiddler抓https包配置安卓手机CA证书、抓取微信数据包#导入证书前如果安装过要先清除（首次安装fillder可忽略）  清除电脑上的根证书，WIN+R快捷键，输入：certmgr.msc， 然后回车，查找所有fiddler证书，然后删除。（首次安装fiddler请忽略）     step1:#点击Tools-&amp;gt;选择HTTPS  点击图中的4选择export Root Ceratif">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-25T17:47:19.946Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_png&#x2F;JbrCrRbE0AYRDRCvIXSgsPWFRVMic2qK3YnaB50h7gdjibQ0jAHllNXKE0ib9w7B15PKib6TYUl1iclGw3BOn65negw&#x2F;640?wx_fmt=png">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180107133837015?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180107134134744?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180107134936915?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180107135028985?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180107141750011?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180107142200700?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
+<meta property="og:updated_time" content="2019-12-15T23:29:07.031Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_png&#x2F;JbrCrRbE0AYRDRCvIXSgsPWFRVMic2qK3YnaB50h7gdjibQ0jAHllNXKE0ib9w7B15PKib6TYUl1iclGw3BOn65negw&#x2F;640?wx_fmt=png">
 
 
 
@@ -119,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/25/大佬博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/16/fiddler抓https包/"/>
 
 
 
 
 
-  <title>大佬博客 | waiwailo/blog</title>
+  <title>fiddler抓https包 | waiwailo/blog</title>
   
 
 
@@ -232,7 +240,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/%E5%A4%A7%E4%BD%AC%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/16/fiddler%E6%8A%93https%E5%8C%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="waiwai">
@@ -249,7 +257,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">大佬博客</h1>
+          <h1 class="post-title" itemprop="name headline">fiddler抓https包</h1>
         
 
         <div class="post-meta">
@@ -261,8 +269,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-25T22:22:00+08:00">
-                2019-11-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-16T07:04:31+08:00">
+                2019-12-16
               </time>
             
 
@@ -299,41 +307,32 @@
       
 
       
-        <ul>
-<li><p>大佬博客</p>
-<p>链接</p>
-<ul>
-<li><p><a href="https://assassins-white.github.io/" target="_blank" rel="noopener">Assassins 小白assassins-white.github.io</a></p>
-</li>
-<li><p><a href="https://lengjibo.github.io/" target="_blank" rel="noopener">冷逸lengjibo.github.io</a></p>
-</li>
-<li><p><a href="https://baishunxd.github.io/" target="_blank" rel="noopener">Calendulabaishunxd.github.io</a></p>
-</li>
-<li><p><a href="http://www.recorday.cn/" target="_blank" rel="noopener">C0d3r1iuwww.recorday.cn</a></p>
-</li>
-<li><p><a href="http://caiyuhuan.com/" target="_blank" rel="noopener">CYHcaiyuhuan.com</a></p>
-</li>
-<li><p><a href="https://linuz.me/" target="_blank" rel="noopener">Linuzlinuz.me</a></p>
-</li>
-<li><p><a href="https://plz227.github.io/" target="_blank" rel="noopener">Plzplz227.github.io</a></p>
-</li>
-<li><p><a href="http://blog.leanote.com/snowming" target="_blank" rel="noopener">Snowmingblog.leanote.</a></p>
-</li>
-<li><p><a href="https://foxgrin.github.io" target="_blank" rel="noopener">https://foxgrin.github.io</a></p>
-</li>
-<li><p><a href="https://www.cnblogs.com/-zhong/" target="_blank" rel="noopener">https://www.cnblogs.com/-zhong/</a></p>
-</li>
-<li><p>论坛</p>
-</li>
-<li><p><a href="https://www.t00ls.net/" target="_blank" rel="noopener">T00LSwww.t00ls.net</a></p>
-</li>
-<li><p><a href="http://xssor.io/" target="_blank" rel="noopener">XSS ORxssor.io</a></p>
-</li>
-<li><p><a href="https://www.0xnull.org/" target="_blank" rel="noopener">0xNULLwww.0xnull.org</a></p>
-</li>
-</ul>
-</li>
-</ul>
+        <h2><span id="fiddler-zhua-https-bao-pei-zhi-an-zhuo-shou-ji-ca-zheng-shu-zhua-qu-wei-xin-shu-ju-bao">fiddler抓https包配置安卓手机CA证书、抓取微信数据包</span><a href="#fiddler-zhua-https-bao-pei-zhi-an-zhuo-shou-ji-ca-zheng-shu-zhua-qu-wei-xin-shu-ju-bao" class="header-anchor">#</a></h2><p>导入证书前如果安装过要先清除（首次安装fillder可忽略）</p>
+<p> 清除电脑上的根证书，WIN+R快捷键，输入：certmgr.msc， 然后回车，查找所有fiddler证书，然后删除。（首次安装fiddler请忽略） </p>
+<p> <img src="https://mmbiz.qpic.cn/mmbiz_png/JbrCrRbE0AYRDRCvIXSgsPWFRVMic2qK3YnaB50h7gdjibQ0jAHllNXKE0ib9w7B15PKib6TYUl1iclGw3BOn65negw/640?wx_fmt=png" alt="img"> </p>
+<h5><span id="step1"><strong>step1</strong>:</span><a href="#step1" class="header-anchor">#</a></h5><p>点击Tools-&gt;选择HTTPS</p>
+<p><img src="https://img-blog.csdn.net/20180107133837015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>点击图中的4选择export Root Ceratificate to Desktop, 这样Fiddler生成的证书就会导入到桌面上。</p>
+<h5><span id="step2"><strong>step2：</strong></span><a href="#step2" class="header-anchor">#</a></h5><p><img src="https://img-blog.csdn.net/20180107134134744?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>之后选择Connections。复选四个框框，见明知意。1.捕获ftp请求、2.允许远程设备链接并捕获其请求数据(手机导入Fiddler的CA证书时，这一步是必须的步骤，因此在这里我们提前勾选上)、3/4.分别是重用客户端服务端请求。</p>
+<p>-—————————————————————————————–</p>
+<p>到此为止Fiddler端配置完成。</p>
+<p>而现在大家可能会遇见有一个问题即所有的浏览器都不能正常访问Internet。究其原因是：Fiddler的证书此时是不被所有浏览器信任的。解决方案:</p>
+<p>拿火狐举例:</p>
+<p><img src="https://img-blog.csdn.net/20180107134936915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>点击查看证书，选择导入</p>
+<p><img src="https://img-blog.csdn.net/20180107135028985?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>导入step1中生成到桌面上的Fiddler.cer证书即可，之后点击确定即可解决浏览器不能访问的问题。</p>
+<p>其他浏览器相同的解决思路….不在赘述</p>
+<p>-—————————————————————————</p>
+<p>step3</p>
+<p>需求: 手机请求的数据通过Fiddler要能看得到所有请求的详情</p>
+<p>方案: 把step1中生成的证书通过qq也好、数据线也好传送到手机的sd卡内；然后进入手机的sd找到发送过来的fiddlerRooty.cer（默认是这个名）.点击进行安装即可</p>
+<p><img src="https://img-blog.csdn.net/20180107141750011?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>在自己的笔记本上开个热点，然后用手机连接该热点。注意手机要进行配置</p>
+<p><img src="https://img-blog.csdn.net/20180107142200700?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIyNTk1Nzk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>此时Fiddler可以抓取手机端的数据了</p>
+<p>重启Fiddler、手机重启wlan。测试连接成功。顺利抓取微信的数据包</p>
 
       
     </div>
@@ -358,8 +357,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/25/src%E9%93%BE%E6%8E%A5/" rel="next" title="src链接">
-                <i class="fa fa-chevron-left"></i> src链接
+              <a href="/2019/11/26/sqlwaf/" rel="next" title="sqlwaf">
+                <i class="fa fa-chevron-left"></i> sqlwaf
               </a>
             
           </div>
@@ -368,8 +367,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/26/sqlwaf/" rel="prev" title="sqlwaf">
-                sqlwaf <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/16/urllib%E7%9A%84%E8%AF%A6%E8%A7%A3%E4%BD%BF%E7%94%A8%20/" rel="prev" title="urllib的详解使用 ">
+                urllib的详解使用  <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -422,8 +421,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,6 +480,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">fiddler抓https包配置安卓手机CA证书、抓取微信数据包#</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">step1:#</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">step2：#</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

